@@ -11,4 +11,8 @@ debugging
     then add breakpoints with 
         binding.pry 
         (hit Ctrl + D to continue)
+
+rspec
+    output text in a test
+        
 ```
