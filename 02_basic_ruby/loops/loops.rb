@@ -88,7 +88,9 @@ end
 =begin
 Assignment
     1. Read the Loops & Iterators chapter of LaunchSchool’s Introduction to Programming With Ruby.
+        https://launchschool.com/books/ruby/read/loops_iterators
     2. Try re-writing the above examples using alternative loop methods to achieve the same results.
+        NO
 Knowledge Check
 
 This section contains questions for you to check your understanding of this lesson. If you’re having trouble answering the questions below on your own, review the material above to find the answer.
@@ -99,4 +101,6 @@ This section contains questions for you to check your understanding of this less
     5. What is a #times loop, and how would you use it?
     6. What is an until loop, and how would you use it?
     7. What are the #upto and #downto loops, and how would you use them?
+
+    did most of this
 =end
