@@ -110,18 +110,5 @@ puts ""
         
         3. Complete the array exercises from the ruby-exercises repo that you previously cloned.
         
-        4. Let’s get some practice reading documentation. You’ll feel just like a real programmer! What do you think the methods #clear, #insert, #sample, #shuffle, and #uniq do? Look these methods up in the Array class documentation. Were you close?            
-
-            
-    Knowledge Check
-        This section contains questions for you to check your understanding of this lesson. If you’re having trouble answering the questions below on your own, review the material above to find the answer.
-            What is an array and why is it useful?
-
-            What are two ways to create a new empty array?
-            
-            What are some ways of accessing the elements in an array?
-            
-            What are 3 ways to add data to an array?
-            
-            How can you remove elements from an array?            
+        4. Let’s get some practice reading documentation. You’ll feel just like a real programmer! What do you think the methods #clear, #insert, #sample, #shuffle, and #uniq do? Look these methods up in the Array class documentation. Were you close?              
 =end
