@@ -31,16 +31,17 @@ puts my_hash.keys
 puts my_hash.values
 puts my_hash.merge(hash_hash)
 
-# symbols as hash keys
+puts "SYMBOLS AS HASH KEYS"
 
 american = {
     :george => "Washington",
     :ben => "Franklin"
 }
 
+# preferred...
 martian = {
     beeblebrox: "pew pew",
     clorox: "bloop!"
 }
 
-puts martian[:beeblebrox] 
+puts american[:george]
