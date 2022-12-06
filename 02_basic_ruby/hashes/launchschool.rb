@@ -79,23 +79,53 @@ puts "A NOTE ON HASH ORDER"
 puts "as of Ruby 1.9 hashes maintain the order in which they're stored"
 
 puts "EXERCISE 1"
-puts ""
+puts "Given a hash of family members, with keys as the title and an array of names as the values, use Ruby's built-in select method to gather only siblings' names into a new array."
+family = {  
+    uncles: ["bob", "joe", "steve"],
+    sisters: ["jane", "jill", "beth"],
+    brothers: ["frank","rob","david"],
+    aunts: ["mary","sally","susan"]
+  }
+print family
+immediate_family = family.select do |k, v|
+    k == :sisters || k == :brothers
+end
+arr = immediate_family.values.flatten
+p arr
 
 puts "EXERCISE 2"
-puts ""
+puts "Look at Ruby's merge method. Notice that it has two versions. What is the difference between merge and merge!? Write a program that uses both and illustrate the differences."
+puts a_hash = {blarb: 'blarg'}
+puts b_hash = {smaug: 'dragon'}
+puts "merge() modification of a_hash is temporary"
+puts a_hash.merge(b_hash)
+puts "merge!() modification of a_hash is permanen"
+puts a_hash.merge!(b_hash)
 
 puts "EXERCISE 3"
-puts ""
+puts "Using some of Ruby's built-in Hash methods, write a program that loops through a hash and prints all of the keys. Then write a program that does the same thing except printing the values. Finally, write a program that prints both."
+opposites = {positive: "negative", up: "down", right: "left"}
+opposites.each_key { |key| puts key }
+opposites.each_value { |value| puts value }
+opposites.each { |key, value| puts "The opposite of #{key} is #{value}" }
 
 puts "EXERCISE 4"
+puts "Given the following expression, how would you access the name of the person?"
+puts "person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}"
+person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+puts person[:name]
 puts ""
 
 puts "EXERCISE 5"
-puts "What method could you use to find out if a Hash contains a specific value in it? Write a program that verifies that the value is within the hash."
+puts "What method could you use to find out if a Hash contains a specific value in it?"
+puts "Write a program that verifies that the value is within the hash."
 def does_contain(the_hash,search_for)
-    TODO: continue here
-    puts name_and_age.select { |k,v| (k == "Bob") || (v == 19) } # passes back key-value pair when either key is "Bob" or value is 19
+    return the_hash.value?(search_for)
 end
+blarg = {age: "old"}
+puts does_contain(blarg,"old")
+# or simply
+puts blarg.value?("old")
 puts ""
 
 puts "EXERCISE 6"
