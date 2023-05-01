@@ -1,0 +1,1 @@
+# https://medium.com/@baweaver/reducing-enumerable-part-one-the-journey-begins-ddc1d4108490
