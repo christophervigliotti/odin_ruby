@@ -4,6 +4,8 @@ https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby
 
 ## Notes
 
+Notes are found in most sections
+
 ```
 comments
     single line
