@@ -24,7 +24,7 @@ By the end of this lesson, you should be able to do the following:
 
 *  Explain how to iterate over a nested array and hash.
 
-## Knowledge Check
+## Knowledge Check 
 
 * What is a nested array? What data is useful to store in a nested array?
 
