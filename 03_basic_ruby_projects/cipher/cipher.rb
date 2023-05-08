@@ -5,7 +5,7 @@ def caesar_encode(string,key,encode_or_decode = 'encode')
         lowercase_char = char.downcase # get lowercase version of letter
         char_is_letter = char.match(/^[[:alpha:]]$/) != nil # is it a letter
         char_is_uppercase = char == char.upcase # is it uppercase
-        position = 0 # define the position here (is mutates in the if blocks beow)
+        position = 0 # position var
         if char_is_letter # if it's a letter determine the position of the encoded character
             if encode_or_decode == 'encode'
                 position = (alphabet_array.find_index(lowercase_char)) + key
