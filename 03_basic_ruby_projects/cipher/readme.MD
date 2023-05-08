@@ -4,6 +4,8 @@ via https://www.theodinproject.com/lessons/ruby-caesar-cipher
 
 ## Solution (with code comments)
 
+Also at https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
+
 ```
 def caesar_encode(string,key,encode_or_decode = 'encode') 
     encoded_string = '' # capture the encoded string
