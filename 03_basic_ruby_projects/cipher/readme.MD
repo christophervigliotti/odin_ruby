@@ -1,10 +1,10 @@
 # Cipher
 
-## Solution (with code comments)
+## Solution
 
-At https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
+https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
 
-## Assignment Details
+## Assignment 
 
 Also at https://www.theodinproject.com/lessons/ruby-caesar-cipher
 

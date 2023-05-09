@@ -2,9 +2,11 @@
 
 ## Solution
 
-check it out: https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/stock_picker/stock_picker.rb
+https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/stock_picker/stock_picker.rb
 
 ## Assignment Details
+
+Also at https://www.theodinproject.com/lessons/ruby-stock-picker 
 
 Implement a method #stock_picker that takes in an array of stock prices, one for each hypothetical day. It should return a pair of days representing the best day to buy and the best day to sell. Days start at 0.
 

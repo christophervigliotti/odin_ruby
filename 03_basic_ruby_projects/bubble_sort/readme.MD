@@ -2,9 +2,9 @@
 
 ## Solution 
 
-forthcoming
+https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/bubble_sort/bubble_sort.rb
 
-## Assignment Details
+## Assignment 
 
 Also at https://www.theodinproject.com/lessons/ruby-bubble-sort 
 
