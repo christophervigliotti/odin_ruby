@@ -2,7 +2,7 @@
 
 ## Solution (with code comments)
 
-forthcoming
+booya! https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/substrings/substrings.rb 
 
 ## Assignment Details
 
