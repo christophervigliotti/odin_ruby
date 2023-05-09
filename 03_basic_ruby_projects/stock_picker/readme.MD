@@ -2,7 +2,7 @@
 
 ## Solution
 
-forthcoming
+check it out: https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/stock_picker/stock_picker.rb
 
 ## Assignment Details
 
