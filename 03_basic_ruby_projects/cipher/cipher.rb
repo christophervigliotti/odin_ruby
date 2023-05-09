@@ -1,7 +1,7 @@
 def caesar_encode(string,key,encode_or_decode = 'encode') 
     encoded_string = '' # capture the encoded string
     alphabet_array = ('a'..'z').to_a # get an array of lowercase letters
-    string.split("").each_with_index do | char,each_with_index | # loop through each character of string
+    string.split("").each_with_index do | char,index | # loop through each character of string
         lowercase_char = char.downcase # get lowercase version of letter
         char_is_letter = char.match(/^[[:alpha:]]$/) != nil # is it a letter
         char_is_uppercase = char == char.upcase # is it uppercase
