@@ -1,6 +1,6 @@
-# Cipher
+# Substrings
 
-## Solution (with code comments)
+## Solution
 
 booya! https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/substrings/substrings.rb 
 
