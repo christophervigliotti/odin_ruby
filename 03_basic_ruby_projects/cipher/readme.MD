@@ -4,21 +4,9 @@
 
 https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
 
-## Revised Solition 
+## Revised Solution 
 
-_After several severeal rounds of feedback..._
-
-```
-def caesar_encode(string,key,encode_or_decode = 'encode') 
-    encoded_string = '' 
-    alphabet_array = ('a'..'z').to_a  + ('A'..'Z').to_a
-    rotate_to_position = (encode_or_decode == 'encode') ? key : -key
-    key_array = alphabet_array.rotate(rotate_to_position)
-    map_hash = Hash[alphabet_array.zip(key_array)]
-    string.each_char{|character|encoded_string += map_hash[character] || character}
-    encoded_string # return variable
-end
-```
+TBD
 
 ## Feedback
 
@@ -51,6 +39,41 @@ Convo with reviewer led to two more revisions...
 
 > https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_03.rb 
 > https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_04.rb 
+> 
+> ```
+> def caesar_encode(string,key,encode_or_decode = 'encode') 
+>     encoded_string = '' 
+>     alphabet_array = ('a'..'z').to_a  + ('A'..'Z').to_a
+>     rotate_to_position = (encode_or_decode == 'encode') ? key : -key
+>     key_array = alphabet_array.rotate(rotate_to_position)
+>     map_hash = Hash[alphabet_array.zip(key_array)]
+>     string.each_char{|character|encoded_string += map_hash[character] || character}
+>     encoded_string # return variable
+> end
+> ```
+
+Incproprate Array.map, Array.join & String.tr
+
+> Revision 5
+> 
+> https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_05.rb 
+> 
+> Notes
+> 
+> ```
+> Array.map 
+>     array.map { |string| string.upcase }
+> Array.join 
+>     [ "a", "b", "c" ].join        
+>         #=> "abc"
+> String.tr
+>     "hello".tr('el', 'ip')      
+>         #=> "hippo"
+> ```
+
+### Basic Datatypes
+
+
 
 ## Assignment 
 
