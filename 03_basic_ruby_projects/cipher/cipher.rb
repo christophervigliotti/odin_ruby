@@ -1,3 +1,4 @@
+# see readme.MD for more solutions (some of them more concise)
 def caesar_encode(string,key,encode_or_decode = 'encode') 
     encoded_string = '' # capture the encoded string
     alphabet_array = ('a'..'z').to_a # get an array of lowercase letters

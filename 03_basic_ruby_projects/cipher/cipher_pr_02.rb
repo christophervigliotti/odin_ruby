@@ -1,4 +1,4 @@
-
+# see readme.MD for more solutions 
 def caesar_encode(string,key,encode_or_decode = 'encode') 
     encoded_string = '' 
     alphabet_array = ('a'..'z').to_a 
