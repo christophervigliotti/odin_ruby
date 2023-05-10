@@ -11,16 +11,16 @@ https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projec
 1. strings have some nifty helper methods `.each_char.with_index `
 2. have you considered using a hash to map the characters? The map could be generated with code
 
-_Items 1 and 2 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_01.rb _
+>Items 1 and 2 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_01.rb 
 
 3. another useful helper method on arrays is rotate https://ruby-doc.org/core-2.7.0/Array.html#method-i-rotate 
 
-_Item 3 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_02.rb _
+>Item 3 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_02.rb 
 
 4. there is also a method to take an array of two arrays and turn it into a hash.
 [[a,b,c],[d,e,f]].... -> {a => d, ...probably a `.transpose.to_h`
 
-> _It looks like `.zip` would work (maybe you were referring to that method?)...`Hash[alphabet_array.zip(key_array)]` (great for debugging / dumping the key to see if it looks right_
+> It looks like `.zip` would work (maybe you were referring to that method?)...`Hash[alphabet_array.zip(key_array)]` (great for debugging / dumping the key to see if it looks right
 >)  
 >```
 >key_array = alphabet_array.rotate(rotate_to_position)
@@ -29,7 +29,7 @@ _Item 3 above incorporated into https://github.com/christophervigliotti/odin_rub
 5. the hash .invert method https://ruby-doc.org/core-2.7.0/Hash.html#method-i-invert
 will probably also be useful
 
-_I'm not sure how to incorporate .invert into my code...specifically what the benefit would be_
+> I'm not sure how to incorporate .invert into my code...specifically what the benefit would be
 
 ## Assignment 
 
