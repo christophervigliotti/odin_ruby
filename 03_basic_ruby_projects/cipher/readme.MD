@@ -20,11 +20,11 @@ _Item 3 above incorporated into https://github.com/christophervigliotti/odin_rub
 4. there is also a method to take an array of two arrays and turn it into a hash.
 [[a,b,c],[d,e,f]].... -> {a => d, ...probably a `.transpose.to_h`
 
-_It looks like `.zip` would work (maybe you were referring to that method?)...`Hash[alphabet_array.zip(key_array)]` (great for debugging / dumping the key to see if it looks right_
-)  
-```
-key_array = alphabet_array.rotate(rotate_to_position)
-```
+> _It looks like `.zip` would work (maybe you were referring to that method?)...`Hash[alphabet_array.zip(key_array)]` (great for debugging / dumping the key to see if it looks right_
+>)  
+>```
+>key_array = alphabet_array.rotate(rotate_to_position)
+>```
 
 5. the hash .invert method https://ruby-doc.org/core-2.7.0/Hash.html#method-i-invert
 will probably also be useful
