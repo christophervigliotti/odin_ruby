@@ -11,11 +11,11 @@ https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projec
 1. strings have some nifty helper methods `.each_char.with_index `
 2. have you considered using a hash to map the characters? The map could be generated with code
 
-Feedback from 1 and 2 incorporated into LINK_TO_FILE
+Items 1 and 2 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_01.rb
 
 3. another useful helper method on arrays is rotate https://ruby-doc.org/core-2.7.0/Array.html#method-i-rotate
 
-Feedback from 3 incorporated into LINK_TO_FILE
+Item 3 above incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_02.rb
 
 4. there is also a method to take an array of two arrays and turn it into a hash.
 [[a,b,c],[d,e,f]].... -> {a => d, ...probably a `.transpose.to_h`
@@ -23,7 +23,7 @@ Feedback from 3 incorporated into LINK_TO_FILE
 5. the hash .invert method https://ruby-doc.org/core-2.7.0/Hash.html#method-i-invert
 will probably also be useful
 
-Feedback from 4 and 5 incorporated into WIP
+TODO: Items 4 and 5 incorporated into https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_03.rb
 
 ## Assignment 
 
