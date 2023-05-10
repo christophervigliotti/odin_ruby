@@ -4,7 +4,9 @@
 
 https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
 
-## Revised Solition (after several severeal rounds of feedback)
+## Revised Solition 
+
+_After several severeal rounds of feedback..._
 
 ```
 def caesar_encode(string,key,encode_or_decode = 'encode') 
