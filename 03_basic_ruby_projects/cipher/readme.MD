@@ -4,9 +4,9 @@
 
 https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
 
-### Feedback
+## Feedback
 
-#### 5/10/2023 - From RF 
+### 5/10/2023 - From RF 
 
 1. strings have some nifty helper methods `.each_char.with_index `
 2. have you considered using a hash to map the characters? The map could be generated with code
