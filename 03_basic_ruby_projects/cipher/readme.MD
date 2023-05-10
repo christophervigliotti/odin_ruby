@@ -1,8 +1,24 @@
 # Cipher
 
-## Solution
+## Original Solution
 
 https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
+
+## Revised Solition (after several severeal rounds of feedback)
+
+```
+def caesar_encode(string,key,encode_or_decode = 'encode') 
+    encoded_string = '' 
+    alphabet_array = ('a'..'z').to_a  + ('A'..'Z').to_a
+    rotate_to_position = (encode_or_decode == 'encode') ? key : -key
+    key_array = alphabet_array.rotate(rotate_to_position)
+    map_hash = Hash[alphabet_array.zip(key_array)]
+    string.each_char{|character| 
+        encoded_string += map_hash[character] || character
+    }
+    encoded_string # return variable
+end
+```
 
 ## Feedback
 
@@ -30,6 +46,8 @@ https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projec
 will probably also be useful
 
 > I'm not sure how to incorporate .invert into my code...specifically what the benefit would be
+
+Had a convo with RF and was able to get 
 
 ## Assignment 
 
