@@ -47,7 +47,10 @@ will probably also be useful
 
 > I'm not sure how to incorporate .invert into my code...specifically what the benefit would be
 
-Had a convo with RF and was able to get 
+Convo with reviewer led to two more revisions...
+
+> https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_03.rb 
+> https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher_pr_04.rb 
 
 ## Assignment 
 
