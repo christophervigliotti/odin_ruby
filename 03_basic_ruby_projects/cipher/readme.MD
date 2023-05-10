@@ -6,7 +6,15 @@ https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projec
 
 ## Revised Solution 
 
-TBD
+```
+def caesar_encode(string,key,encode_or_decode = 'encode') 
+    encoded_string = '' 
+    alphabet_array = ('a'..'z').to_a  + ('A'..'Z').to_a
+    rotate_to_position = (encode_or_decode == 'encode') ? key : -key
+    key_array = alphabet_array.rotate(rotate_to_position)
+    string.tr(alphabet_array.join,key_array.join) # love it
+end
+```
 
 ## Feedback
 

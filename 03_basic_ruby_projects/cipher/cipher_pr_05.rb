@@ -1,13 +1,12 @@
 # see readme.MD for more solutions 
-def caesar_encode(string,key,encode_or_decode = 'encode') 
-    encoded_string = '' 
-    alphabet_array = ('a'..'z').to_a  + ('A'..'Z').to_a
-    rotate_to_position = (encode_or_decode == 'encode') ? key : -key
-    key_array = alphabet_array.rotate(rotate_to_position)
-    string.tr(alphabet_array.join,key_array.join) # love it
+def caesar_encode(string,key) 
+    ALPHABET_ARRAY = ('a'..'z').to_a  + ('A'..'Z').to_a
+    rotate_to_position = key
+    key_array = ALPHABET_ARRAY.rotate(rotate_to_position)
+    string.tr(ALPHABET_ARRAY.join,key_array.join) # love it
 end
 p caesar_encode('Et tu, Bluto?',5)
-p caesar_encode('Jy yz, Gqzyt?',5,'decode')
+p caesar_encode('Jy yz, Gqzyt?',-5)
 
 =begin
 Notes
