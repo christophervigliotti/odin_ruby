@@ -4,7 +4,7 @@
 
 https://github.com/christophervigliotti/odin_ruby/blob/main/03_basic_ruby_projects/cipher/cipher.rb 
 
-## Revised Solution (in 8 lines of code)
+## Revised Solution (in 8 lines of code!)
 
 ```
 def caesar_encode(string,key,encode_or_decode = 'encode') 
