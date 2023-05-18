@@ -1,8 +1,8 @@
-# Object Oriented Programming Basics > Intro
+# Object Oriented Programming with Ruby
 
-https://www.theodinproject.com/lessons/ruby-object-oriented-programming
+https://launchschool.com/books/oo_ruby
 
-## Concepts
+## The Object Model
 
 ### Encapsulation
 
@@ -23,3 +23,7 @@ The concept of inheritance is used in Ruby where a class inherits the behaviors 
 ### Modules / Mixins
 
 Another way to apply polymorphic structure to Ruby programs is to use a Module. Modules are similar to classes in that they contain shared behavior. However, you cannot create an object with a module. A module must be mixed in with a class using the include method invocation. This is called a mixin. After mixing in a module, the behaviors declared in that module are available to the class and its objects.
+
+## Resume Here
+
+https://launchschool.com/books/oo_ruby/read/classes_and_objects_part1
