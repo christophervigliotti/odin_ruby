@@ -24,6 +24,10 @@ class MyCar
         puts "shutting off"
     end
 
+    def spray_paint(color)
+        @color = color
+    end
+
 end
 
 pacer = MyCar.new(year = 1976, color = "Light Blue", Model = "Pacer")
@@ -32,3 +36,7 @@ pacer.speed_up
 pacer.speed_up
 pacer.speed_up
 pacer.brake
+
+puts pacer.color
+pacer.spray_paint('Metallic Pea');
+puts pacer.color
