@@ -3,5 +3,9 @@
 https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby
 
 ## Resume At
+https://www.eriktrautman.com/posts/ruby-explained-classes 
+    child of https://www.theodinproject.com/lessons/ruby-object-oriented-programming 
 
-https://www.theodinproject.com/lessons/ruby-object-oriented-programming >  https://launchschool.com/books/oo_ruby/read/classes_and_objects_part1 
+### TODO
+
+* fix viking.rb
