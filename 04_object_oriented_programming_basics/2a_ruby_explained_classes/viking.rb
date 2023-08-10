@@ -1,3 +1,4 @@
+# this wasn't meant to be a working example...good, because it doesn't work!
 class Person
     attr_accessor :name, :age, :health, :strength
     MAX_HEALTH = 120
