@@ -1,3 +1,5 @@
-# Object Oriented Programming Basics
+# Odin Ruby
+## Object Oriented Programming Basics
+### Object Oriented Programming
 
-https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby#object-oriented-programming-basics
+ https://www.theodinproject.com/lessons/ruby-object-oriented-programming
