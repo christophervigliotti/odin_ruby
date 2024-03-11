@@ -33,3 +33,14 @@ https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby
                                         To
                                             The top of 
                                                 https://launchschool.com/books/oo_ruby/read/classes_and_objects_part2
+                                    March 8 work
+                                        From
+                                            The top of 
+                                                https://launchschool.com/books/oo_ruby/read/classes_and_objects_part2
+                                        To
+                                            "Inheritance vs Modules" @ https://launchschool.com/books/oo_ruby/read/inheritance#inheritancevsmodules 
+                                        Notes
+                                            @ vs @@ vs self in Ruby - https://medium.com/@sgg2123/vs-self-in-ruby-1d4d88170
+                                    March 11 launchschool work continues
+                                    March 12
+                                        Start at https://launchschool.com/books/oo_ruby/read/inheritance#accidentalmethodoverriding
