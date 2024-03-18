@@ -43,4 +43,7 @@ https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby
                                             @ vs @@ vs self in Ruby - https://medium.com/@sgg2123/vs-self-in-ruby-1d4d88170
                                     March 11 launchschool work continues
                                     March 12
-                                        Start at https://launchschool.com/books/oo_ruby/read/inheritance#accidentalmethodoverriding
+                                        LaunchSchool Object Oriented Programming 
+                                            Started at https://launchschool.com/books/oo_ruby/read/inheritance#accidentalmethodoverriding
+                                            Read + Code-Along Finished 
+                                            Exercises Finished
