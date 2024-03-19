@@ -1,0 +1,17 @@
+Knowledge Check
+    What is a class?
+        An object factory
+        A collection of methods and/or properties organized by area of interest
+    What are getters and setters?
+        methods that get and set properties
+    What is inheritance?
+        an OOP design technique that allows you to share methods and properties among a heirarchy of objects
+    What is a scope?
+        represents when you can/can't access a method/property
+    When is a new scope defined?
+        when you first define a variable.  that variable is then accessible by anything "downstream" (or in the case of @variables can be accessed by )
+
+        pause here...have a good command of all scopes and how to use them before proceeding
+
+    What is the purpose of instance variables?
+    What is the difference between class variables and instance variables?

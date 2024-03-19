@@ -8,7 +8,8 @@ remote_base_url = "https://en.wikipedia.org/wiki"
     begin
         url = "#{remote_base_url}/#{yr}"
         puts "Getting page #{url}"
-        rpage = open(url)
+        # deprecated under Ruby 2.7, removed in Ruby 3.0 rpage = open(url)
+        rpage = URI.open(url).read
     rescue StandardError=>e
         puts "\tError: #{e}"
         #if !e.message.to_s.include? "Can't get"

@@ -1,3 +1,4 @@
+p 'press [ctrl] + C to end this nightmare hahaha!'
 =begin
     while 1
         puts "Enter a number>>"
