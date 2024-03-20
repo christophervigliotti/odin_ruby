@@ -1,0 +1,8 @@
+variable scopes
+    local_variable
+    @instance_variable
+        can be accessed by the instances of a class but not by the class
+    @@class_variable
+        can be accessed by the class AND ALSO by it's instances
+    CONSTANT
+    $global_variable

@@ -10,8 +10,10 @@ Knowledge Check
         represents when you can/can't access a method/property
     When is a new scope defined?
         when you first define a variable.  that variable is then accessible by anything "downstream" (or in the case of @variables can be accessed by )
-
-        pause here...have a good command of all scopes and how to use them before proceeding
-
     What is the purpose of instance variables?
+        vars accessed by instances of classes but not directly by the class
     What is the difference between class variables and instance variables?
+        class
+            can be accessed by the class AND ALSO by it's instances
+        instance
+            can be accessed by the instances of a class but not by the class
