@@ -26,7 +26,6 @@ class TicTacToe
 
   def end_game
     broadcast("Player #{@whose_turn}wins.")
-    break
   end
 
   def start_game
