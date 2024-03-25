@@ -27,7 +27,7 @@ class TicTacToe
   end
 
   def check_for_win
-    array.map! do |item|
+    WIN_CONDITIONS.map! do |item|
       end_game unless (item - @moves[@whose_turn]).empty?
     end
   end
@@ -40,6 +40,7 @@ class TicTacToe
 
   def end_game
     broadcast("Player #{@whose_turn}wins.")
+    # TODO: terminate game
   end
 
   def start_game
@@ -54,7 +55,7 @@ class TicTacToe
     if !@moves[0].include(space_number) && !moves[1].include(space_number)
       @moves[@whose_turn - 1].append(space_number)
       draw_board
-      broadcast("Player #{@whose_turn} moved to space #{space_number}.")
+      # broadcast("Player #{@whose_turn} moved to space #{space_number}.")
       # and then check for a win
       check_for_win
       change_player
