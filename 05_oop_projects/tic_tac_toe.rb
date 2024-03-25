@@ -42,7 +42,7 @@ class TicTacToe
 
   def draw_board
     moves[0].each { |x| 
-      @board.sub! x.to_s, 'X' 
+      @board.sub! x.to_s, 'X' 1
       #puts "draw_board, 0, #{x}"
     }
     moves[1].each { |x| 
