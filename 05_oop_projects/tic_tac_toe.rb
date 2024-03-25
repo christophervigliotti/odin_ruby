@@ -47,9 +47,10 @@ class TicTacToe
   end
 end
 
-# puts TicTacToe.instance_methods(false)
-game = TicTacToe.new
-game.start_game
+# game = TicTacToe.new
+# game.start_game
+
+puts TicTacToe.instance_methods(false)
 
 # throws an error
 another_game = TicTacToe.new.start_game.take_turn(5)
