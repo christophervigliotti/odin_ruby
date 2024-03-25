@@ -52,6 +52,6 @@ game = TicTacToe.new
 game.start_game
 
 # throws an error
-game.take_turn(5) 
-# tic_tac_toe.rb:39:in `take_turn': undefined method `include' for nil:NilClass (NoMethodError)
-# from tic_tac_toe.rb:53:in `<main>'
+another_game = TicTacToe.new.start_game.take_turn(5)
+# tic_tac_toe.rb:55:in `take_turn': undefined method `include' for nil:NilClass (NoMethodError)
+# from tic_tac_toe.rb:55:in `<main>'
