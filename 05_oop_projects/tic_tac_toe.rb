@@ -35,7 +35,7 @@ class TicTacToe
   end
 
   def draw_board(message)
-    update_message(message)
+    append_messages(message)
     system('clear')
     moves[0].each { |x| 
       @board.sub! x.to_s, 'X'
@@ -44,29 +44,31 @@ class TicTacToe
       @board.sub! x.to_s, 'O'
     }
     puts @board
-    puts @message_history.last5
+    puts @message_history.last
   end
 
-  def manage_game_state(valid_move)
-    is_game_over = false
+  def on_turn_taken(valid_move, space_number)
+    win_condition_met = false
     WIN_CONDITIONS.each { |x|
-      is_game_over = true if (x - moves[@whose_turn - 1]).empty?
+      win_condition_met = true if (x - moves[@whose_turn - 1]).empty?
     }
     all_spaces_taken = moves[0].size + moves[1].size == 9
-    puts all_spaces_taken
-    change_player if !@game_over && valid_move && !all_spaces_taken
+    message = valid_move ? "Player #{@whose_turn} moved to space #{space_number}. Player #{@whose_turn == 1 ? 2 : 1}'s turn." : "Sorry Player #{@whose_turn}, space '#{space_number}' is not available. Try Again."    
+    message = 'Game Over.  No winner.' if all_spaces_taken 
+    message = "Game Over. Player #{@whose_turn} wins!" if win_condition_met
+    change_player if !win_condition_met && valid_move && !all_spaces_taken
+    draw_board(message)
+    @game_over = true if win_condition_met || all_spaces_taken
   end
 
   def take_turn(space_number)
     space_number = space_number.to_i
     valid_move = !moves[0].include?(space_number) && !moves[1].include?(space_number)
-    message = valid_move ? "Player #{@whose_turn} moved to space #{space_number}." : "Sorry Player #{@whose_turn}, space '#{space_number}' is not available. Try Again."    
     moves[@whose_turn - 1].append(space_number) if valid_move
-    manage_game_state(valid_move) 
-    draw_board(message)
+    on_turn_taken(valid_move, space_number) 
   end
 
-  def update_message(message)
+  def append_messages(message)
     @message_history.append(message)
   end
 end
