@@ -21,11 +21,12 @@ class Mastermind
   DIVIDER = '----------------------'
   MAX_TURNS = 8
   ANSWER_SIZE = 4
-  attr_accessor :answer, :turn_number, :game_over, :guesses, :message
+  attr_accessor :answer, :turn_number, :game_over, :guesses, :message, :player_is_human, :computer_guess_correct_positions
 
   def initialize
     system('clear')
     @guesses = []
+    @computer_guess_correct_positions = [] # TODO: populate array with X elements set to false where X s answer_size
     reset_game
   end
 
@@ -71,6 +72,8 @@ class Mastermind
     end
   end
 
+  def generate_computer_guess
+
   def handle_correct_guess(guess)
     @message = "Guess: '#{guess.to_s}'. You win!"
     draw_board
@@ -80,9 +83,10 @@ class Mastermind
   def handle_incorrect_guess(guess)
     has_another_turn = turn_number + 1 < MAX_TURNS
     correct_positions = get_correct_positions(guess)
-    correct_colors = get_correct_colors(guess)
+    # correct_colors = get_correct_colors(guess)
     if_has_another_turn_suffix = has_another_turn ? 'Guess again.' : 'No more guesses.'
-    @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'. Correct colors '#{correct_colors}'. #{if_has_another_turn_suffix}"
+    # @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'. Correct colors '#{correct_colors}'. #{if_has_another_turn_suffix}"
+    @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'."
     @turn_number = @turn_number.next if has_another_turn
     draw_board
   end
@@ -111,8 +115,16 @@ class Mastermind
   def reset_game
     @turn_number = 1
     @game_over = false
-    generate_random_answer
+    puts 'Do you want to guess (G) or generate the correct answer and have the computer guess (any other character)'
+    @player_is_human = gets.chomp.upcase = G
+    generate_random_answer if player_is_human
+    get_answer_from_human unless player_is_human
     draw_board
+  end
+
+  def get_answer_from_human
+    puts 'Choose an answer that is #{ANSWER_SIZE} chars in length using letters #{COLORS.to_s}'
+    @answer = gets.chomp()
   end
 
   def take_turn(guess_string)
