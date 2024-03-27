@@ -5,8 +5,8 @@ class Game
   def initialize
     @game = Mastermind.new
   end
-
-  def play_game
+ 
+  def play_game # handles game state...terminates when the game is over
     until @game.game_over 
       @game.take_turn(gets.chomp) 
     end
@@ -28,7 +28,7 @@ class Mastermind
     reset_game
   end
 
-  def draw_board
+  def draw_board # all 'write to screen' logic is encapsulated here
     system('clear')
     puts HEADER
     puts DIVIDER
@@ -45,7 +45,7 @@ class Mastermind
     puts DIVIDER
   end
 
-  def get_correct_positions(guess)
+  def get_correct_positions(guess) # returns a true/false array of user's guesses. elements are true when the correct color is in the correct position
     correct_positions = []
     guess.each_with_index do |element,index|
       puts index
@@ -55,7 +55,7 @@ class Mastermind
     correct_positions
   end
 
-  def get_correct_colors(guess)
+  def get_correct_colors(guess) # returns an array of correct colors guessed
     correct_colors = []
     guess.each do |n|
       correct_colors.append(n) if @answer.include?(n)
@@ -63,7 +63,7 @@ class Mastermind
     correct_colors.uniq
   end
 
-  def generate_random_answer
+  def generate_random_answer 
     @answer = []
     ANSWER_SIZE.times do
       answer.push(COLORS[rand(1..COLORS.size)-1])
@@ -81,7 +81,7 @@ class Mastermind
     correct_positions = get_correct_positions(guess)
     correct_colors = get_correct_colors(guess)
     if_has_another_turn_suffix = has_another_turn ? 'Guess again.' : 'No more guesses.'
-    @message = "Turn #{@turn_number}. Guess No '#{guess.to_s}'. Correct positions '#{correct_positions}'. Correct colors '#{correct_colors}'. #{if_has_another_turn_suffix}"
+    @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'. Correct colors '#{correct_colors}'. #{if_has_another_turn_suffix}"
     @turn_number = @turn_number.next if has_another_turn
     draw_board
   end
