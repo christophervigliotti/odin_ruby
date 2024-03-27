@@ -94,18 +94,17 @@ class Mastermind
   end
 
   def guess_correct?(guess)
-    puts "def guess_correct?, guess = '#{guess}'"
-    puts "def guess_correct?, @answer = '#{@answer}'"
-    puts "def guess_correct?? '#{guess == @answer}'"
     guess == @answer
   end
 
   def guess_valid?(guess)
-    valid_guess = true
+    colors_guessed_are_valid = true
+    guess_is_correct_length = guess.length == ANSWER_SIZE.size
     guess.each do |n|
-      valid_guess = false unless COLORS.include?(n)
+      colors_guessed_are_valid = false unless COLORS.include?(n)
     end
-    valid_guess
+
+    colors_guessed_are_valid && guess_is_correct_length
   end
 
   def reset_game
@@ -117,9 +116,8 @@ class Mastermind
 
   def take_turn(guess_string)
     guess = guess_string.upcase.chars
-    guess_is_valid = guess_valid?(guess)# && guess.length == ANSWER_SIZE.size
+    guess_is_valid = guess_valid?(guess)
     handle_valid_guess(guess) if guess_is_valid
-    # TODO: continue here
   end
 end
 
