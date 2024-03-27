@@ -1,3 +1,4 @@
+# https://www.theodinproject.com/lessons/ruby-mastermind
 # plays the game
 class Game
   attr_accessor :game

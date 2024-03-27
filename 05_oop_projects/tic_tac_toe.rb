@@ -1,3 +1,4 @@
+# https://www.theodinproject.com/lessons/ruby-tic-tac-toe
 # shall we play a game?
 class TicTacToe
   WIN_CONDITIONS = [
