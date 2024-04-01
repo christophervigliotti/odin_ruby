@@ -1,5 +1,6 @@
 # https://www.theodinproject.com/lessons/ruby-mastermind
 # plays the game
+=begin
 class Game
   attr_accessor :game
 
@@ -13,6 +14,7 @@ class Game
     end
   end
 end
+=end
 
 # the game
 class Mastermind
@@ -43,7 +45,7 @@ class Mastermind
     puts DIVIDER
     puts "Turn #{turn_number} of #{MAX_TURNS} | Color choices: #{COLORS}"
     puts "Respond by typing #{ANSWER_SIZE} characters then hitting enter."
-    #puts "Answer #{@answer}"
+    puts "Answer #{@answer}"
     puts DIVIDER
   end
 
@@ -57,6 +59,7 @@ class Mastermind
     correct_positions
   end
 
+=begin
   def get_correct_colors(guess) # returns an array of correct colors guessed
     correct_colors = []
     guess.each do |n|
@@ -64,15 +67,28 @@ class Mastermind
     end
     correct_colors.uniq
   end
+=end
 
   def generate_random_answer 
-    @answer = []
-    ANSWER_SIZE.times do
-      answer.push(COLORS[rand(1..COLORS.size)-1])
-    end
+    @answer = generate_random_sequence
   end
 
-  def generate_computer_guess
+  def generate_random_sequence
+    random_guess = []
+    ANSWER_SIZE.times do
+      random_guess.push(COLORS[rand(1..COLORS.size)-1])
+    end
+    random_guess
+  end
+
+  def generate_guess
+    @guess = @turn_number == 1 ? generate_random_sequence : generate_educated_guess
+  end
+
+  def generate_educated_guess
+    
+
+  end
 
   def handle_correct_guess(guess)
     @message = "Guess: '#{guess.to_s}'. You win!"
@@ -86,7 +102,7 @@ class Mastermind
     # correct_colors = get_correct_colors(guess)
     if_has_another_turn_suffix = has_another_turn ? 'Guess again.' : 'No more guesses.'
     # @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'. Correct colors '#{correct_colors}'. #{if_has_another_turn_suffix}"
-    @message = "Turn #{@turn_number}. Guess No '#{guess.@turn_number}'. Correct positions '#{correct_positions}'."
+    @message = "Turn #{@turn_number}. Guess No '#{@guess}'. Correct positions '#{correct_positions}'."
     @turn_number = @turn_number.next if has_another_turn
     draw_board
   end
@@ -104,11 +120,11 @@ class Mastermind
 
   def guess_valid?(guess)
     colors_guessed_are_valid = true
-    guess_is_correct_length = guess.length == ANSWER_SIZE.size
+    guess_is_correct_length = guess.length == ANSWER_SIZE
     guess.each do |n|
       colors_guessed_are_valid = false unless COLORS.include?(n)
     end
-
+    puts "guess_valid? guess: #{guess}, colors_guessed_are_valid: #{colors_guessed_are_valid}, guess_is_correct_length: #{guess_is_correct_length}"
     colors_guessed_are_valid && guess_is_correct_length
   end
 
@@ -116,23 +132,38 @@ class Mastermind
     @turn_number = 1
     @game_over = false
     puts 'Do you want to guess (G) or generate the correct answer and have the computer guess (any other character)'
-    @player_is_human = gets.chomp.upcase = G
+    @player_is_human = gets.chomp.upcase == 'G'
+    puts player_is_human ? 'You will guess' : 'Computer will guess'
     generate_random_answer if player_is_human
     get_answer_from_human unless player_is_human
     draw_board
   end
 
   def get_answer_from_human
-    puts 'Choose an answer that is #{ANSWER_SIZE} chars in length using letters #{COLORS.to_s}'
-    @answer = gets.chomp()
+    prompt = "Choose an answer that is #{ANSWER_SIZE} chars in length using letters #{COLORS.to_s}"
+    puts prompt
+    @answer = gets.chomp.upcase.chars
+    until guess_valid?(@answer)
+      puts "#{@answer} is not a valid answer. #{prompt}."
+      @answer = gets.chomp.upcase.chars
+    end
   end
 
-  def take_turn(guess_string)
-    guess = guess_string.upcase.chars
+  def take_turn
+    guess = player_is_human ? gets.chomp : generate_guess
     guess_is_valid = guess_valid?(guess)
     handle_valid_guess(guess) if guess_is_valid
   end
+
+  def play_game
+    until @game_over 
+      take_turn
+    end
+  end
+
 end
 
-a_game = Game.new
+#a_game = Game.new
+#a_game.play_game
+a_game = Mastermind.new
 a_game.play_game
