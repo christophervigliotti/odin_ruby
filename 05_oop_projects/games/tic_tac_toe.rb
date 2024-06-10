@@ -1,39 +1,85 @@
-# https://www.theodinproject.com/lessons/ruby-tic-tac-toe
-# shall we play a game?
-
-# next
-# get it working again
-# tictactoe file and game runner file
-# create rspec tests
-# separate logical board from display board and the player loop
-=begin
-class for board state 
-  did someone win
-
-=end
 class TicTacToe
 
-  # slip the numbers down by one 
-  WIN_CONDITIONS = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [1, 4, 7],
-    [2, 5, 8],
-    [3, 6, 9],
-    [1, 5, 9],
-    [3, 5, 7]
-  ]
-
+  # constants
+  BOARD_STATE = ['1','2','3','4','5','6','7','8','9']
   # TODO: read up on the ruby format() method (see the chat)
   # the BOARD string is stored into the TEMPLATE constant
+  BOARDTEMPLATE = <<~BOARD
+    TIC * TAC * TOE
+
+    %1s | %1s | %1s
+    ---------------
+    %1s | %1s | %1s
+    ---------------
+    %1s | %1s | %1s
+
+    %s's move
+    BOARD
+
+  OPTIONSTEMPLATE = <<~OPTIONS
+    TIC * TAC * TOE
+
+    Who Goes First?
+
+    I = "I want to!"
+    V = Vigtendo 5000 goes first
+    [literally any other key] = Random 
+  OPTIONS
+  WIN_CONDITIONS = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,7]
+  ]
+
+  # properties/variables
+  attr_reader :move_number, :whose_turn, :message_history, :game_state, :end_state, :im_done
+
+  # methods
+  def initialize
+    p 'TicTacToe.initalize()'
+  end
+
+  def draw_screen
+
+  end
+
+  def choose_options
+    draw_screen(OPTIONSTEMPLATE.to_s)
+    chosen = get_option()
+  end
+
+  def play_game
+    choose_options
+    until @game_state == 'game_over' do
+      take_turn
+    end
+  end
+
+  def play_games
+    until im_done do
+      play_game
+    end
+  end
+
+  def take_turn
+
+  end
+
+=begin
+
+
   TEMPLATE = <<~BOARD
     TIC * TAC * TOE
 
     %1s | %1s | %1s
-    -----------
+    ---------------
     %1s | %1s | %1s
-    -----------
+    ---------------
     %1s | %1s | %1s
 
     %s's move
@@ -108,13 +154,19 @@ class TicTacToe
     @message_history.append(message)
   end
 
+  # refactored methods
+
   def play_game
     until game_over do
       puts to_s
       take_turn(gets.chomp)
     end
   end
-end
 
-match = TicTacToe.new
-match.play_game
+  def run
+    until quit_game do
+      play_game
+    end
+  end
+=end
+end
