@@ -1,11 +1,9 @@
-# https://www.theodinproject.com/lessons/ruby-tic-tac-toe
-# shall we play a game?
+# Vigtendo 5000
 
-# next
-# get it working again
-# tictactoe file and game runner file
-# create rspec tests
-# separate logical board from display board and the player loop
-=begin
-class for board state 
-  did someone win
+## Now You're Playing With Power
+
+"ruby vigtendo.rb" to boot up the system
+
+## Games (Under Development)
+1. Tic-Tac-Toe
+2. Mastermind
