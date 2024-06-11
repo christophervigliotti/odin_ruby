@@ -4,9 +4,11 @@ class TicTacToe
   BOARD_STATE = ['1','2','3','4','5','6','7','8','9']
   # TODO: read up on the ruby format() method (see the chat)
   # the BOARD string is stored into the TEMPLATE constant
+  HEADERTEMPLATE = <<~HEADER
+  * Vigtendo 5000 * TIC-TAC-TOE *
+  -------------------------------
+  HEADER
   BOARDTEMPLATE = <<~BOARD
-    TIC * TAC * TOE
-
     %1s | %1s | %1s
     ---------------
     %1s | %1s | %1s
@@ -14,17 +16,15 @@ class TicTacToe
     %1s | %1s | %1s
 
     %s's move
-    BOARD
-
+  BOARD
   OPTIONSTEMPLATE = <<~OPTIONS
-    TIC * TAC * TOE
+    Who Goes First?  Press a key and then hit [ENTER]
 
-    Who Goes First?
-
+    V = Vigtendo 5000 goes first.
     I = "I want to!"
-    V = Vigtendo 5000 goes first
-    [literally any other key] = Random 
+    G = Get outa here!  Let Vigtendo 5000 randomly choose for me.
   OPTIONS
+  SHOW_METHOD_NAMES = false
   WIN_CONDITIONS = [
     [0,1,2],
     [3,4,5],
@@ -37,23 +37,31 @@ class TicTacToe
   ]
 
   # properties/variables
-  attr_reader :move_number, :whose_turn, :message_history, :game_state, :end_state, :im_done
+  attr_reader :move_number, :whose_turn, :message_history, :game_state, :end_state, :im_done, :choice
 
   # methods
   def initialize
-    p 'TicTacToe.initalize()'
+    puts 'TicTacToe.initalize()'  if SHOW_METHOD_NAMES
   end
 
-  def draw_screen
-
+  def draw_screen(screen)
+    puts 'TicTacToe.draw_screen()' if SHOW_METHOD_NAMES
+    # blarg! not working >> format(screen)
+    puts HEADERTEMPLATE
+    puts screen
   end
 
   def choose_options
-    draw_screen(OPTIONSTEMPLATE.to_s)
-    chosen = get_option()
+    puts 'TicTacToe.choose_options()'  if SHOW_METHOD_NAMES
+    until ['V','I','G'].include? choice
+      system('clear')
+      draw_screen(OPTIONSTEMPLATE.to_s)
+      @choice = gets.chomp.upcase
+    end
   end
 
   def play_game
+    puts 'TicTacToe.play_game()'  if SHOW_METHOD_NAMES
     choose_options
     until @game_state == 'game_over' do
       take_turn
@@ -61,13 +69,14 @@ class TicTacToe
   end
 
   def play_games
+    puts 'TicTacToe.play_games()'  if SHOW_METHOD_NAMES
     until im_done do
       play_game
     end
   end
 
   def take_turn
-
+    puts 'TicTacToe.play_games()' 
   end
 
 =begin
