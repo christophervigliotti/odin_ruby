@@ -12,7 +12,7 @@ class Vigtendo
         puts 'Vigtendo.choose_cartridge()' if SHOW_METHOD_NAMES
         # TODO: allow user to select from both games
         cartridge = TicTacToe.new
-        cartridge.play_games
+        cartridge.start
     end
 end
 

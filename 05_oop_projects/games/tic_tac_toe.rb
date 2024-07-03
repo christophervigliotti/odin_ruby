@@ -24,7 +24,7 @@ class TicTacToe
     I = "I want to!"
     G = Get outa here!  Let Vigtendo 5000 randomly choose for me.
   OPTIONS
-  SHOW_METHOD_NAMES = false
+  SHOW_METHOD_NAMES = true
   WIN_CONDITIONS = [
     [0,1,2],
     [3,4,5],
@@ -58,26 +58,36 @@ class TicTacToe
       draw_screen(OPTIONSTEMPLATE.to_s)
       @choice = gets.chomp.upcase
     end
+    if @choice == 'V'
+      @whose_turn = 'vigtendo'
+    else if @choice = 'I'
+      @whose_turn = 'human'
+    else
+      @whose_turn = ['human','vigtendo'].sample
+    end
+  end6
+
+  # each 'cartridge' has a start method
+  def start
+    puts 'TicTacToe.start()'  if SHOW_METHOD_NAMES
+    choose_options
+    until @game_state == 'game_over' do
+      (@whose_turn == 'human') ? take_turn_human : take_turn_computer
+    end
   end
 
   def play_game
     puts 'TicTacToe.play_game()'  if SHOW_METHOD_NAMES
-    choose_options
-    until @game_state == 'game_over' do
-      take_turn
-    end
-  end
-
-  def play_games
-    puts 'TicTacToe.play_games()'  if SHOW_METHOD_NAMES
     until im_done do
-      play_game
     end
   end
 
-  def take_turn
-    puts 'TicTacToe.play_games()' 
+  def take_turn_computer
+    puts 'TicTacToe.take_turn_computer()' if SHOW_METHOD_NAMES
+  end
 
+  def take_turn_human
+    puts 'TicTacToe.take_turn_human()' if SHOW_METHOD_NAMES
   end
 
 =begin
